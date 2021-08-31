@@ -15,4 +15,8 @@ public class HelloMockito {
         return "mockito" + mockitoService.world(RandomUtils.nextInt());
     }
 
+    public String say(String hello) {
+        return "mockito" + mockitoService.world(RandomUtils.nextInt());
+    }
+
 }

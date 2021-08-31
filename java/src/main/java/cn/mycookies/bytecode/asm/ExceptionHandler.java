@@ -1,9 +1,9 @@
 package cn.mycookies.bytecode.asm;
 
-import aj.org.objectweb.asm.MethodVisitor;
+import com.sun.org.slf4j.internal.Logger;
+import com.sun.org.slf4j.internal.LoggerFactory;
+import jdk.internal.org.objectweb.asm.MethodVisitor;
 import jdk.internal.org.objectweb.asm.Opcodes;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.util.HashSet;
@@ -94,7 +94,7 @@ public class ExceptionHandler {
                 i = UUID.randomUUID().clockSequence();
             }
             String itemName = originItemName + "." + i;
-            logger.info("desc=ExceptionHandler.handle itemName冲突，重试后的结果为：{}", itemName);
+            logger.debug("desc=ExceptionHandler.handle itemName冲突，重试后的结果为：{}", itemName);
             return itemName;
         }
         return originItemName;

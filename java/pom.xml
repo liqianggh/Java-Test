@@ -46,16 +46,21 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.bj58.zhuanzhuan.zmonitor</groupId>
-            <artifactId>com.bj58.zhuanzhuan.zmonitor.javaclient</artifactId>
-            <version>1.1.7</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.projectlombok</groupId>
-                    <artifactId>lombok</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.14.1</version>
         </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>com.bj58.zhuanzhuan.zmonitor</groupId>-->
+        <!--            <artifactId>com.bj58.zhuanzhuan.zmonitor.javaclient</artifactId>-->
+        <!--            <version>1.1.7</version>-->
+        <!--            <exclusions>-->
+        <!--                <exclusion>-->
+        <!--                    <groupId>org.projectlombok</groupId>-->
+        <!--                    <artifactId>lombok</artifactId>-->
+        <!--                </exclusion>-->
+        <!--            </exclusions>-->
+        <!--        </dependency>-->
     </dependencies>
     <build>
         <plugins>

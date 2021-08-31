@@ -1,6 +1,5 @@
 import org.junit.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
+import org.mockito.*;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Matchers.anyInt;
@@ -27,5 +26,10 @@ public class HelloMockitoTest extends BaseMockitoTest {
         when(mockitoService.world(anyInt())).thenReturn(1);
         // 2. 结果断言
         assertEquals(helloMockito.hello(), "mockito1");
+        Mockito.stub(helloMockito.say("case1")).toReturn("hello java");
+        Mockito.stub(helloMockito.say("case2")).toReturn("hello javascript");
+
+        MockitoAnnotations.initMocks(this);
+        System.out.println(helloMockito.say("case1"));
     }
 }
